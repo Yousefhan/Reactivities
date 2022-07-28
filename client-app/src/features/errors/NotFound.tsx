@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Button, Header, Icon, Segment } from "semantic-ui-react";
-
+import { Link } from "react-router-dom";
 export default function NotFound() {
   return (
     <Segment placeholder>
