@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Application.Activities.Core;
+using Application.Core;
 
 namespace API.Middleware
 {

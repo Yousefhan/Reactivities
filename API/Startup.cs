@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using API.Extensions;
 using API.Middleware;
 using Application.Activities;
-using Application.Activities.Core;
+using Application.Core;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
