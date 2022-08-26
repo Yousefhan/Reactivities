@@ -12,7 +12,7 @@ export default observer(function AcitvityDashboard() {
   const { loadActivities, activityRegistry } = activityStore;
 
   useEffect(() => {
-    if (activityRegistry.size === 0) loadActivities();
+    loadActivities();
   }, [activityRegistry.size, loadActivities]);
 
   if (activityStore.loadingInitial) return <LoadingComponent content="Loading activities ..."></LoadingComponent>;

@@ -21,7 +21,6 @@ export default class ActivityStore {
   }
 
   get groupedActivities() {
-    console.log(this.activitiesByDate);
     return Object.entries(
       this.activitiesByDate.reduce((activities, activity) => {
         const date = format(activity.date!, "dd MMM yyyy");
@@ -179,5 +178,16 @@ export default class ActivityStore {
 
   clearSelectedActivity = () => {
     this.selectedActivity = undefined;
+  };
+
+  updateAttendeeFollowing = (username: string) => {
+    this.activityRegistry.forEach((activity) => {
+      activity.attendees?.forEach((attendee) => {
+        if (attendee.username === username) {
+          attendee.following ? attendee.followersCount-- : attendee.followersCount++;
+          attendee.following = !attendee.following;
+        }
+      });
+    });
   };
 }

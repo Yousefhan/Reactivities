@@ -9,6 +9,7 @@ interface Props {
 }
 export default observer(function ActivityDetailedSidebar({ acttivity: { attendees, host } }: Props) {
   if (!attendees) return null;
+  console.log(attendees);
   return (
     <>
       <Segment textAlign="center" style={{ border: "none" }} attached="top" secondary inverted color="teal">
@@ -29,7 +30,7 @@ export default observer(function ActivityDetailedSidebar({ acttivity: { attendee
                 <Item.Header as="h3">
                   <Link to={`/profiles/${attendee.username}`}>{attendee.displayName}</Link>
                 </Item.Header>
-                <Item.Extra style={{ color: "orange" }}>Following</Item.Extra>
+                {attendee.following && <Item.Extra style={{ color: "orange" }}>Following</Item.Extra>}
               </Item.Content>
             </Item>
           ))}
