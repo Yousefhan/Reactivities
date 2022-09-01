@@ -11,8 +11,8 @@ namespace Application.Profiles
         public Guid Id { get; set; }
         public string Title { get; set; }
         public string Category { get; set; }
-        public DateTime MyProperty { get; set; }
+        public DateTime Date { get; set; }
         [JsonIgnore]
-        public string Username { get; set; }
+        public string HostUsername { get; set; }
     }
 }
